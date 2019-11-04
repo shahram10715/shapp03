@@ -10,6 +10,17 @@
 ;
 ;You should have received a copy of the GNU General Public License
 ;along with this program.  If not, see <https://www.gnu.org/licenses/>.
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+;Execute the following command to see the order of needed inputs:
+; (command "_plot")
+;For ploter name it should be DWG TO PDF.PC3, since it is the built-in plotter.
+;(command "_plot" "y" "Model" "DWG TO PDF.PC3" "ISO full bleed A2 (420.00 x 594.00 MM)" "M"
+;			"L" "N" "W" pt1 pt2 "F" "C" "Y" "acad.ctb" "Y" "W" "123" "N" "Y")
+
+
+
 
 (defun dtr (x)
 	(* pi (/ x 180.0)))
