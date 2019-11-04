@@ -52,6 +52,12 @@
 	
 	(setq sel2 (ssget "w" pt1t pt2t))
 
-
+	
+	(if (/= sel2 nil)
+		(princ "something found...\n"))
+	
+	(setvar "osmode" oldsnap)
+	
+	(princ))
 
 
