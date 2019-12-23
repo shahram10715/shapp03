@@ -22,17 +22,18 @@
 
 
 
+
 (defun dtr (x)
   (* pi (/ x 180.0))
 )
 
-(defun myplot (pt1 pt2 pgno)
+(defun myplot (pt1 pt2 sc pgno)
   (command "_plot"	   "y"		   "Model"
 	   "DWG TO PDF.PC3"
 	   "ISO full bleed A2 (420.00 x 594.00 MM)"
 	   "M"		   "L"		   "N"
 	   "W"		   pt1		   pt2
-	   "F"		   "C"		   "Y"
+	   sc		   "C"		   "Y"
 	   "acad.ctb"	   "Y"		   "W"
 	   pgno		   "N"		   "Y"
 	  )
@@ -41,8 +42,9 @@
 (defun c:shpdf ()
   (setq pt1 (getpoint "\nEnter the first corner of page...\n"))
   (setq pt2 (getpoint "Enter the second corner of page...\n"))
-  (setq xsp (getdist "horizontal distance between sheets: "))
-  (setq ysp (getdist "vertical distance between sheets: "))
+  (setq xsp (getdist "horizontal distance between sheets:...\n"))
+  (setq ysp (getdist "vertical distance between sheets:...\n"))
+  (setq sc (getstring "Enter the scale:...\n"))
   (command "zoom" "e")
   (setq delx (- (car pt2) (car pt1)))
   (setq delx (abs delx))
@@ -61,7 +63,7 @@
   (setq pgnumber 0)
   (while (/= selc nil)
     (while (/= selr nil)
-      (myplot pt1r pt2r pgnumber)
+      (myplot pt1r pt2r sc pgnumber)
       (setq pgnumber (1+ pgnumber))
       (setq pt1r (polar pt1r (dtr 0.0) delx))
       (setq pt2r (polar pt2r (dtr 0.0) delx))
