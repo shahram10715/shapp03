@@ -20,6 +20,26 @@
 ;			"L" "N" "W" pt1 pt2 "F" "C" "Y" "acad.ctb" "Y" "W" "123" "N" "Y")
 ;This code makes pdf from left to right, and up to down
 
+;(command "_plot")
+;Detailed plot configuration? 		"y" 	yes
+;Enter a layout name? 			"Model"
+;Enter an output device name? 		"DWG TO PDF.PC3"
+;Enter paper size? 			"ISO full bleed A2 (420.00 x 594.00 MM)"
+;Enter paper units? 			"M" 	millimeters
+;Enter drawing orientation? 		"L" 	landscape
+;Plot upside down? 			"N" 	no
+;Enter plot area? 			"W" 	window
+;Enter lower left corner of window? 	pt1
+;Enter upper right corner of window? 	pt2
+;Enter plot scale? 			"F" 	fit or 1:20
+;Enter plot offset? 			"C" 	center
+;Plot with plot styles? 		"Y" 	yes
+;Enter plot style table name? 		"acad.ctb"
+;Plot with lineweights? 		"Y" 	yes
+;Enter shade plot settings? 		"W" 	legacy wireframe
+;Enter File name? 			pgno 	page number
+;Save changes to page setup? 		"N" 	no
+;Proceed with plot? 			"Y" 	yes
 
 
 
